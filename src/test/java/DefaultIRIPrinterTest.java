@@ -15,6 +15,6 @@ public class DefaultIRIPrinterTest {
         String s = OWLPrinter.iriPrinter.getString(IRI.create(iri));
         Assert.assertTrue("String should not be null", s != null);
         Assert.assertTrue("String should not be empty", s.length() > 0);
-        Assert.assertTrue("String should at least contain the entity name", s.contains(name));
+        Assert.assertTrue("String should at least contain the entity name, got '" + s + "'", s.contains(name));
     }
 }

@@ -1,6 +1,7 @@
 package de.uniulm.in.ki.mbrenner.owlprinter;
 
 import de.uniulm.in.ki.mbrenner.owlprinter.api.*;
+import de.uniulm.in.ki.mbrenner.owlprinter.api.PrefixManager;
 import de.uniulm.in.ki.mbrenner.owlprinter.impl.*;
 import org.semanticweb.owlapi.model.*;
 
@@ -23,6 +24,7 @@ public class OWLPrinter {
     public static OWLEntityPrinter entityPrinter = new DefaultEntityPrinter();
     public static OWLOntologyPrinter ontologyPrinter = new DefaultOWLOntologyPrinter();
     public static IRIPrinter iriPrinter = new DefaultIRIPrinter();
+    public static PrefixManager prefixManager = new DefaultPrefixManager();
     public static Consumer<String> outputAction = System.out::print;
 
     /**
