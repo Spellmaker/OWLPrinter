@@ -113,6 +113,7 @@ public class OWLPrinter {
 
     public static String getString(Object o){
         if(o == null) return "null";
+        if (o instanceof OWLObject) return getString((OWLObject) o);
         return o.toString();
     }
 
